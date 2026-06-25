@@ -1,0 +1,872 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Ashwinbhai Soni — Sales Leader Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0F1B35;--navy2:#1A2E55;--blue:#2563EB;--blue2:#1D4ED8;
+  --blue-light:#EFF6FF;--blue-mid:#BFDBFE;
+  --gold:#D4A017;--gold-light:#FEF9EC;
+  --green:#16A34A;--green-light:#DCFCE7;
+  --white:#FFFFFF;--off:#F8FAFD;--text:#1E293B;--muted:#64748B;--border:#E2E8F0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--off);color:var(--text);line-height:1.6;font-size:15px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(15,27,53,0.97);backdrop-filter:blur(12px);height:64px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;letter-spacing:.3px}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:#94A3B8;font-size:.75rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--blue);color:#fff;padding:8px 20px;border-radius:6px;font-size:.75rem;font-weight:600;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--blue2)}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1E3A6E 100%);display:flex;align-items:center;padding:100px 3rem 5rem;position:relative;overflow:hidden}
+.hc{position:absolute;border-radius:50%;pointer-events:none}
+.hc1{width:600px;height:600px;top:-150px;right:-150px;background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.15)}
+.hc2{width:350px;height:350px;bottom:-80px;left:-80px;background:rgba(212,160,23,.07);border:1px solid rgba(212,160,23,.1)}
+.hc3{width:200px;height:200px;top:30%;right:25%;background:rgba(37,99,235,.06)}
+.hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.18);border:1px solid rgba(37,99,235,.35);padding:6px 16px;border-radius:100px;margin-bottom:1.5rem}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#4ADE80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.badge-txt{font-size:.73rem;font-weight:600;color:#93C5FD;letter-spacing:1px;text-transform:uppercase}
+h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.4rem);font-weight:800;color:#fff;line-height:1.08;margin-bottom:.6rem}
+h1.hero-name em{display:block;color:var(--gold);font-style:normal;font-weight:700;font-size:.85em}
+.hero-title{font-size:.82rem;font-weight:500;color:#93C5FD;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.4rem}
+.hero-desc{font-size:.96rem;color:#94A3B8;line-height:1.85;max-width:450px;margin-bottom:2.4rem;font-weight:300}
+.hero-desc strong{color:#E2E8F0;font-weight:600}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-blue{background:var(--blue);color:#fff;padding:13px 30px;border-radius:8px;text-decoration:none;font-size:.83rem;font-weight:600;transition:all .2s;display:inline-block;box-shadow:0 4px 14px rgba(37,99,235,.35)}
+.btn-blue:hover{background:var(--blue2);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.2);color:#CBD5E1;padding:13px 30px;border-radius:8px;text-decoration:none;font-size:.83rem;font-weight:600;transition:all .2s;display:inline-block}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.hero-contacts{display:flex;flex-direction:column;gap:.55rem}
+.hci{display:flex;align-items:center;gap:.65rem;font-size:.82rem;color:#64748B}
+.hci span{color:#94A3B8}
+/* HERO CARD */
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:2rem;backdrop-filter:blur(6px)}
+.hcard-title{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#64748B;margin-bottom:1.25rem}
+.stats2x2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden;margin-bottom:1px}
+.sc{background:rgba(15,27,53,.6);padding:1.4rem;text-align:center}
+.sc:first-child{border-radius:12px 0 0 0}.sc:nth-child(2){border-radius:0 12px 0 0}
+.sc:nth-child(3){border-radius:0 0 0 12px}.sc:last-child{border-radius:0 0 12px 0}
+.sn{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;color:#fff;line-height:1}
+.sn sup{font-size:1rem;color:var(--gold)}
+.sl{font-size:.65rem;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.divl{height:1px;background:rgba(255,255,255,.07);margin:1.2rem 0}
+.bt{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#475569;margin-bottom:.9rem}
+.bpills{display:flex;flex-wrap:wrap;gap:.5rem}
+.bp{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#94A3B8;padding:5px 13px;border-radius:100px;font-size:.74rem;font-weight:500}
+
+/* SECTIONS */
+section{padding:5.5rem 3rem}
+.container{max-width:1160px;margin:0 auto}
+.sec-top{margin-bottom:3rem}
+.sec-eye{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.sec-eye::before{content:'';display:inline-block;width:20px;height:2px;background:var(--blue);border-radius:2px}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:800;color:var(--navy);line-height:1.2}
+.sec-sub{font-size:.88rem;color:var(--muted);margin-top:.5rem;max-width:560px}
+
+/* EXPERIENCE CARDS - NEW DESIGN */
+#experience{background:var(--white)}
+.exp-cards-wrap{display:flex;flex-direction:column;gap:2.5rem}
+.exp-card{background:var(--off);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:box-shadow .25s}
+.exp-card:hover{box-shadow:0 12px 40px rgba(37,99,235,.1)}
+.exp-card-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem}
+.exp-card-header.gold-head{background:linear-gradient(135deg,#3D2B00 0%,#7A5210 100%)}
+.exp-card-header.teal-head{background:linear-gradient(135deg,#0F3D3D 0%,#1A6B5C 100%)}
+.exp-card-header.purple-head{background:linear-gradient(135deg,#2D1B4E 0%,#4A2D8A 100%)}
+.exp-left-info{}
+.exp-badge-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem}
+.exp-badge{padding:4px 12px;border-radius:100px;font-size:.68rem;font-weight:700;letter-spacing:.5px}
+.badge-current{background:#4ADE80;color:#052e16}
+.badge-past{background:rgba(255,255,255,.12);color:#CBD5E1;border:1px solid rgba(255,255,255,.2)}
+.exp-h-role{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:.25rem}
+.exp-h-co{font-size:.85rem;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.3px}
+.exp-h-right{text-align:right}
+.exp-period{font-size:.75rem;color:rgba(255,255,255,.5);margin-bottom:.4rem}
+.prog-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:.6rem 1rem;text-align:center;min-width:120px}
+.prog-pill-label{font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.2rem}
+.prog-pill-val{font-size:.88rem;font-weight:700;color:#fff}
+.exp-card-body{padding:2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.exp-section-title{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.exp-section-title::before{content:'';width:14px;height:2px;background:var(--blue);border-radius:2px}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.exp-bullets li{font-size:.84rem;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.6}
+.exp-bullets li::before{content:'▹';color:var(--blue);position:absolute;left:0;font-size:.75rem;top:2px}
+
+/* GROWTH CARD */
+.growth-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.growth-stat{display:flex;align-items:center;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.growth-stat:last-child{border-bottom:none}
+.growth-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.gi-blue{background:var(--blue-light)}
+.gi-green{background:var(--green-light)}
+.gi-gold{background:var(--gold-light)}
+.growth-label{font-size:.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.15rem}
+.growth-val{font-size:.88rem;font-weight:700;color:var(--navy)}
+.growth-val.big{font-size:1.1rem;color:var(--green)}
+
+/* PERSONAL EXPERIENCE QUOTE */
+.exp-quote{grid-column:1/-1;background:linear-gradient(135deg,var(--blue-light) 0%,#F0F9FF 100%);border:1px solid var(--blue-mid);border-radius:12px;padding:1.5rem;position:relative}
+.exp-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:5rem;color:var(--blue-mid);position:absolute;top:-10px;left:1rem;line-height:1;opacity:.5}
+.exp-quote-text{font-size:.86rem;color:#1E3A5F;line-height:1.8;font-style:italic;padding-left:.5rem}
+.exp-quote-attr{font-size:.72rem;font-weight:700;color:var(--blue);margin-top:.75rem;padding-left:.5rem;letter-spacing:.5px}
+
+/* PROMOTION TRACK */
+.promo-track{grid-column:1/-1;display:flex;align-items:center;gap:0;background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.promo-step{flex:1;padding:1rem;text-align:center;position:relative}
+.promo-step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:1rem;color:var(--blue);z-index:1;font-weight:700}
+.promo-step.start{background:var(--off)}
+.promo-step.end{background:var(--blue);color:#fff}
+.promo-tag{font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.promo-step.end .promo-tag{color:rgba(255,255,255,.6)}
+.promo-title{font-size:.84rem;font-weight:700;color:var(--navy)}
+.promo-step.end .promo-title{color:#fff}
+
+/* SKILLS */
+#skills{background:var(--off)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:all .25s;position:relative;overflow:hidden}
+.skill-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),#60A5FA);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.skill-card:hover{border-color:var(--blue-mid);transform:translateY(-4px);box-shadow:0 12px 32px rgba(37,99,235,.1)}
+.skill-card:hover::after{transform:scaleX(1)}
+.skill-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1rem}
+.skill-name{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.75rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.skill-tag{background:var(--off);border:1px solid var(--border);color:var(--muted);padding:3px 10px;border-radius:100px;font-size:.72rem;font-weight:500}
+
+/* SUMMARY */
+#summary{background:var(--white)}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.summary-text{font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:2rem;position:relative;padding-left:1.5rem}
+.summary-text::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:3px;background:linear-gradient(to bottom,var(--blue),var(--gold));border-radius:2px}
+.summary-text strong{color:var(--navy);font-weight:600}
+.hcards{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.hcard{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.7rem}
+.hcard-icon{width:32px;height:32px;border-radius:8px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.hcard-text{font-size:.79rem;color:var(--text);font-weight:500;line-height:1.4}
+.info-card{background:var(--navy);border-radius:16px;padding:2rem}
+.info-title{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#475569;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.irows{display:flex;flex-direction:column}
+.irow{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:.2rem}
+.irow:last-child{border-bottom:none}
+.ikey{font-size:.64rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#475569}
+.ival{font-size:.87rem;color:#CBD5E1;font-weight:400}
+
+/* EDUCATION */
+#education{background:var(--off)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem}
+.edu-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:2rem;transition:all .2s;position:relative;overflow:hidden}
+.edu-card:hover{border-color:var(--blue-mid);box-shadow:0 8px 24px rgba(37,99,235,.08)}
+.edu-accent{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),#60A5FA)}
+.edu-badge{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:100px;margin-bottom:.75rem}
+.edu-degree{font-size:.98rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.35}
+.edu-school{font-size:.79rem;color:var(--muted);line-height:1.55}
+.cert-label{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.cert-list{display:flex;flex-wrap:wrap;gap:.6rem}
+.cert-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:7px 16px;font-size:.78rem;color:var(--text);font-weight:500;display:flex;align-items:center;gap:.5rem}
+.cert-item::before{content:'🏅';font-size:.8rem}
+
+/* CONTACT */
+#contact{background:var(--navy);padding:5.5rem 3rem}
+.contact-inner{max-width:900px;margin:0 auto}
+.ctop{text-align:center;margin-bottom:3rem}
+.c-eye{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#3B82F6;margin-bottom:.75rem}
+.c-h{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;margin-bottom:.75rem}
+.c-sub{font-size:.9rem;color:#64748B;font-weight:300}
+.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-bottom:2.5rem}
+.cbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.5rem;display:flex;align-items:center;gap:1rem;transition:border-color .2s}
+.cbox:hover{border-color:rgba(37,99,235,.4)}
+.cbox-icon{width:42px;height:42px;border-radius:10px;background:rgba(37,99,235,.18);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cbox-k{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#475569;margin-bottom:.25rem}
+.cbox-v{font-size:.87rem;color:#E2E8F0;font-weight:500;word-break:break-all}
+.cbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-glow{background:var(--blue);color:#fff;padding:13px 34px;border-radius:8px;text-decoration:none;font-size:.83rem;font-weight:600;transition:all .2s;display:inline-block;box-shadow:0 0 24px rgba(37,99,235,.4)}
+.btn-glow:hover{background:var(--blue2);box-shadow:0 0 32px rgba(37,99,235,.6)}
+.btn-ow{border:1.5px solid rgba(255,255,255,.15);color:#94A3B8;padding:13px 34px;border-radius:8px;text-decoration:none;font-size:.83rem;font-weight:600;transition:all .2s;display:inline-block}
+.btn-ow:hover{border-color:rgba(255,255,255,.4);color:#fff}
+
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding:1.5rem 3rem;text-align:center;font-size:.74rem;color:#374151}
+
+/* IMAGE SECTION */
+.img-banner{width:100%;height:260px;object-fit:cover;border-radius:16px;margin-bottom:2rem;display:block}
+.img-inline{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:1rem;display:block}
+.img-half{width:100%;height:200px;object-fit:cover;border-radius:10px;display:block}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* HAMBURGER MENU */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:background .2s}
+.hamburger:hover{background:rgba(255,255,255,.12)}
+.hamburger span{display:block;width:22px;height:2px;background:#94A3B8;border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:#fff}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:#fff}
+
+/* MOBILE NAV DRAWER */
+.mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;z-index:998;background:rgba(15,27,53,0.99);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08);padding:1.5rem;flex-direction:column;gap:0;transform:translateY(-10px);opacity:0;transition:transform .25s ease,opacity .25s ease}
+.mobile-nav.open{transform:translateY(0);opacity:1}
+.mobile-nav a{color:#94A3B8;font-size:.85rem;font-weight:500;letter-spacing:.5px;text-decoration:none;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.05);display:block;transition:color .2s}
+.mobile-nav a:hover{color:#fff}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav .mob-cta{margin-top:1rem;background:var(--blue);color:#fff;padding:12px 24px;border-radius:8px;font-size:.83rem;font-weight:600;text-align:center;border:none}
+
+/* TABLET */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .skills-grid,.summary-grid{grid-template-columns:1fr 1fr}
+  .edu-grid,.cgrid{grid-template-columns:1fr 1fr}
+  .exp-card-body{grid-template-columns:1fr}
+  .promo-track{flex-direction:column}
+  .promo-step:not(:last-child)::after{content:'↓';right:50%;bottom:-12px;top:auto;transform:translateX(50%)}
+  nav{padding:0 1.5rem}
+  section{padding:4rem 1.5rem}
+  #contact{padding:4rem 1.5rem}
+  .hamburger{display:flex}
+  .nav-links,.nav-cta{display:none}
+  .mobile-nav{display:flex}
+  .hero-inner{max-width:100%}
+  .exp-card-header{flex-direction:column;gap:1rem}
+  .exp-h-right{text-align:left}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .skills-grid,.hcards{grid-template-columns:1fr}
+  .edu-grid,.cgrid{grid-template-columns:1fr}
+  .hero{padding:90px 1.2rem 3rem}
+  section{padding:3rem 1.2rem}
+  #contact{padding:3rem 1.2rem}
+  #whyhire{padding:3rem 1.2rem!important}
+  .sec-h{font-size:1.7rem!important}
+  .hero-btns{flex-direction:column;gap:.75rem}
+  .btn-blue,.btn-ghost{text-align:center;padding:12px 20px}
+  .stats2x2{grid-template-columns:1fr 1fr}
+  .hero-card{padding:1.5rem}
+  .exp-card-header{padding:1.5rem}
+  .exp-card-body{padding:1.5rem;grid-template-columns:1fr}
+  .growth-card{padding:1rem}
+  h1.hero-name{font-size:2.4rem!important}
+  .sn{font-size:2rem}
+  .summary-grid{grid-template-columns:1fr;gap:2rem}
+  .cbtns{flex-direction:column;align-items:center}
+  .btn-glow,.btn-ow{width:100%;text-align:center;padding:14px 20px}
+  footer{padding:1.2rem}
+  /* Why Hire section responsive */
+  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{
+    grid-template-columns:1fr!important
+  }
+  [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns: repeat(3,1fr)"]{
+    grid-template-columns:1fr!important
+  }
+  [style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns: repeat(2,1fr)"]{
+    grid-template-columns:1fr!important
+  }
+  .img-banner{height:180px}
+  .img-half{height:160px}
+  [style*="grid-template-columns:1fr 1fr;gap:1.25rem;margin-top"]{
+    grid-template-columns:1fr!important
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Yash <span>Ashwinbhai Soni</span></div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#whyhire">Why Hire Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#summary">Profile</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Contact</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#whyhire" onclick="closeMenu()">Why Hire Me</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#summary" onclick="closeMenu()">Profile</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" class="mob-cta" onclick="closeMenu()">📞 Get in Touch</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hc hc1"></div><div class="hc hc2"></div><div class="hc hc3"></div>
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="badge"><span class="badge-dot"></span><span class="badge-txt">Open to Opportunities</span></div>
+      <h1 class="hero-name">Yash Ashwinbhai<em>Soni</em></h1>
+      <p class="hero-title">Area Sales Manager &nbsp;·&nbsp; Sales &amp; Marketing Leader</p>
+      <p class="hero-desc">
+        <strong>9.5+ years</strong> of proven expertise across Gujarat in
+        <strong>Paints, Adhesives &amp; FMCG</strong>. Managing large-scale operations, 40+ member teams and distributor networks at India's most respected brands.
+      </p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-blue">View Experience</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-contacts">
+        <div class="hci">📞 <span>+91 7984341220</span></div>
+        <div class="hci">✉️ <span>soniyash111.sy@gmail.com</span></div>
+        <div class="hci">📍 <span>Surat, Gujarat, India</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <p class="hcard-title">Career at a Glance</p>
+      <div class="stats2x2">
+        <div class="sc"><div class="sn">9<sup>+</sup></div><div class="sl">Years Exp.</div></div>
+        <div class="sc"><div class="sn">40<sup>+</sup></div><div class="sl">Team Led</div></div>
+        <div class="sc"><div class="sn">4</div><div class="sl">Top Brands</div></div>
+        <div class="sc"><div class="sn">150<sup>%</sup></div><div class="sl">Salary Growth</div></div>
+      </div>
+      <div class="divl"></div>
+      <p class="bt">Brands Worked With</p>
+      <div class="bpills">
+        <span class="bp">Berger Paints</span><span class="bp">Astral Ltd.</span>
+        <span class="bp">Asian Paints</span><span class="bp">Pidilite</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-top reveal">
+      <p class="sec-eye">Career Journey</p>
+      <h2 class="sec-h">Professional Experience & Growth</h2>
+      <p class="sec-sub">From Territory Sales Representative to Area Sales Manager — a decade of consistent growth across Gujarat's leading brands.</p>
+    </div>
+
+    <!-- SALES INDUSTRY IMAGE -->
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80" alt="Sales Leadership" class="img-banner reveal" onerror="this.style.display='none'">
+
+    <div class="exp-cards-wrap">
+
+      <!-- BERGER PAINTS -->
+      <div class="exp-card reveal">
+        <div class="exp-card-header">
+          <div class="exp-left-info">
+            <div class="exp-badge-row">
+              <span class="exp-badge badge-current">● Current Role</span>
+              <span class="exp-badge badge-past">Feb 2025 – Present</span>
+            </div>
+            <div class="exp-h-role">Area Sales Manager</div>
+            <div class="exp-h-co">Berger Paints India Ltd. · Gujarat Operations</div>
+          </div>
+          <div class="exp-h-right">
+            <div class="exp-period">Gujarat-wide Operations</div>
+            <div class="prog-pill">
+              <div class="prog-pill-label">Started As</div>
+              <div class="prog-pill-val">Area Sales Manager</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card-body">
+          <div>
+            <p class="exp-section-title">Key Responsibilities</p>
+            <ul class="exp-bullets">
+              <li>Managing Gujarat-wide sales operations for paints and chemical division.</li>
+              <li>Leading Sales Officers, Senior Sales Officers, TSMs &amp; Assistant Area Sales Managers.</li>
+              <li>Driving market expansion, project sales, and distributor growth strategies.</li>
+              <li>Responsible for sales targets, cash flow management, and team performance.</li>
+              <li>Building strong relationships with dealers, contractors, and key customers.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="exp-section-title">Growth &amp; Impact</p>
+            <div class="growth-card">
+              <div class="growth-stat">
+                <div class="growth-icon gi-blue">👥</div>
+                <div><div class="growth-label">Team Structure</div><div class="growth-val">SOs · SSOs · TSMs · AASMs · Distributors</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-green">📈</div>
+                <div><div class="growth-label">Salary Growth</div><div class="growth-val big">Significant Increment</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-gold">🎯</div>
+                <div><div class="growth-label">Focus</div><div class="growth-val">Statewide Market Expansion</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-track">
+            <div class="promo-step start"><div class="promo-tag">Joined As</div><div class="promo-title">Area Sales Manager</div></div>
+            <div class="promo-step end"><div class="promo-tag">Current</div><div class="promo-title">ASM – Gujarat Operations</div></div>
+          </div>
+          <div class="exp-quote">
+            <p class="exp-quote-text">My experience with Berger Paints has been extremely enriching from a leadership perspective. Managing Gujarat-wide operations has enhanced my strategic planning, business development, and people management capabilities. Berger's strong focus on innovation, customer satisfaction, and market competitiveness has allowed me to contribute meaningfully to business growth while continuously developing as a sales leader.</p>
+            <p class="exp-quote-attr">— Personal Experience · Berger Paints</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASTRAL -->
+      <div class="exp-card reveal">
+        <div class="exp-card-header teal-head">
+          <div class="exp-left-info">
+            <div class="exp-badge-row">
+              <span class="exp-badge badge-past">Dec 2022 – Nov 2024</span>
+              <span class="exp-badge badge-past">2 Years</span>
+            </div>
+            <div class="exp-h-role">Area Sales Manager</div>
+            <div class="exp-h-co">Astral Ltd. – Bondtite Division · South Gujarat</div>
+          </div>
+          <div class="exp-h-right">
+            <div class="exp-period">24 On-Roll Employees</div>
+            <div class="prog-pill">
+              <div class="prog-pill-label">Promoted To</div>
+              <div class="prog-pill-val">Area Sales Manager</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card-body">
+          <div>
+            <p class="exp-section-title">Key Responsibilities</p>
+            <ul class="exp-bullets">
+              <li>Managed South Gujarat MNT &amp; Adhesives Division independently.</li>
+              <li>Handled distributor network and supervised 24 on-roll employees.</li>
+              <li>Conducted sales training and team performance management.</li>
+              <li>Expanded market reach through new project and retailer appointments.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="exp-section-title">Growth &amp; Impact</p>
+            <div class="growth-card">
+              <div class="growth-stat">
+                <div class="growth-icon gi-blue">👥</div>
+                <div><div class="growth-label">Direct Team</div><div class="growth-val big">24 On-Roll Employees</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-green">📈</div>
+                <div><div class="growth-label">Salary Growth</div><div class="growth-val">Performance-linked increment &amp; expanded responsibilities</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-gold">🏆</div>
+                <div><div class="growth-label">Business Result</div><div class="growth-val">Sustainable growth in South Gujarat adhesives market</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-track">
+            <div class="promo-step start"><div class="promo-tag">Joined As</div><div class="promo-title">Territory Sales Manager</div></div>
+            <div class="promo-step end"><div class="promo-tag">Left As</div><div class="promo-title">Area Sales Manager</div></div>
+          </div>
+          <div class="exp-quote">
+            <p class="exp-quote-text">My experience with Astral was highly rewarding as it gave me the opportunity to manage an entire region independently. I gained valuable exposure in strategic planning, distributor network development, team leadership, and market expansion. The entrepreneurial work culture allowed me to take ownership of business decisions and contribute directly to the growth of the Bondtite Adhesives business.</p>
+            <p class="exp-quote-attr">— Personal Experience · Astral Ltd.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASIAN PAINTS -->
+      <div class="exp-card reveal">
+        <div class="exp-card-header gold-head">
+          <div class="exp-left-info">
+            <div class="exp-badge-row">
+              <span class="exp-badge badge-past">Jul 2020 – Dec 2022</span>
+              <span class="exp-badge badge-past">2.5 Years</span>
+            </div>
+            <div class="exp-h-role">Area Manager</div>
+            <div class="exp-h-co">Asian Paints Ltd. – Adhesives Division · Gujarat</div>
+          </div>
+          <div class="exp-h-right">
+            <div class="exp-period">CH-10 Division · Gujarat</div>
+            <div class="prog-pill">
+              <div class="prog-pill-label">Promoted To</div>
+              <div class="prog-pill-val">Area Manager</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card-body">
+          <div>
+            <p class="exp-section-title">Key Responsibilities</p>
+            <ul class="exp-bullets">
+              <li>Managed CH-10 Adhesive &amp; Chemical Division operations across Gujarat.</li>
+              <li>Handled distributor network and sales team management.</li>
+              <li>Executed project sales, market mapping, and retailer expansion.</li>
+              <li>Managed &amp; mentored Team Leaders, Sales Officers, and channel partners.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="exp-section-title">Growth &amp; Impact</p>
+            <div class="growth-card">
+              <div class="growth-stat">
+                <div class="growth-icon gi-blue">🚀</div>
+                <div><div class="growth-label">Career Growth</div><div class="growth-val">Team Leader → Area Manager</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-green">📈</div>
+                <div><div class="growth-label">Market Coverage</div><div class="growth-val">Significant business growth across assigned territory</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-gold">⭐</div>
+                <div><div class="growth-label">Salary Growth</div><div class="growth-val">Consistent performance-based increments &amp; promotions</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-track">
+            <div class="promo-step start"><div class="promo-tag">Joined As</div><div class="promo-title">Team Leader</div></div>
+            <div class="promo-step end"><div class="promo-tag">Left As</div><div class="promo-title">Area Manager</div></div>
+          </div>
+          <div class="exp-quote">
+            <p class="exp-quote-text">Asian Paints was a transformational phase in my career. The company provided excellent exposure to structured sales processes, leadership development, market planning, and execution excellence. Working with one of India's most respected brands helped me strengthen my strategic thinking, team management, and customer-centric approach. The experience significantly contributed to my transition from an individual contributor to a people leader.</p>
+            <p class="exp-quote-attr">— Personal Experience · Asian Paints</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIDILITE -->
+      <div class="exp-card reveal">
+        <div class="exp-card-header purple-head">
+          <div class="exp-left-info">
+            <div class="exp-badge-row">
+              <span class="exp-badge badge-past">Mar 2017 – Jul 2020</span>
+              <span class="exp-badge badge-past">3+ Years</span>
+            </div>
+            <div class="exp-h-role">Territory Sales Incharge (TSI)</div>
+            <div class="exp-h-co">Pidilite Industries Ltd. · Adhesives Division</div>
+          </div>
+          <div class="exp-h-right">
+            <div class="exp-period">Individual Territory</div>
+            <div class="prog-pill">
+              <div class="prog-pill-label">Salary Growth</div>
+              <div class="prog-pill-val" style="color:#4ADE80">150% Increment</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card-body">
+          <div>
+            <p class="exp-section-title">Key Responsibilities</p>
+            <ul class="exp-bullets">
+              <li>Managed adhesive product sales and distributor development independently.</li>
+              <li>Generated new business opportunities through market expansion initiatives.</li>
+              <li>Built strong retailer engagement and distributor relationships.</li>
+              <li>Consistently achieved and exceeded sales targets quarter after quarter.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="exp-section-title">Remarkable Growth Numbers</p>
+            <div class="growth-card">
+              <div class="growth-stat">
+                <div class="growth-icon gi-gold">💰</div>
+                <div><div class="growth-label">Before Joining (Annual)</div><div class="growth-val big">₹24 Lac / Year</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-green">🚀</div>
+                <div><div class="growth-label">Within 6 Months</div><div class="growth-val big">₹4 Lac+ / Month</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon gi-blue">🏆</div>
+                <div><div class="growth-label">Annual After Joining</div><div class="growth-val big">₹36–37 Lac / Year</div></div>
+              </div>
+              <div class="growth-stat">
+                <div class="growth-icon" style="background:#EDE9FE">💼</div>
+                <div><div class="growth-label">Salary Increment</div><div class="growth-val big" style="color:#7C3AED">150% Growth</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-track">
+            <div class="promo-step start"><div class="promo-tag">Joined As</div><div class="promo-title">TSR – Territory Sales Rep.</div></div>
+            <div class="promo-step end"><div class="promo-tag">Left As</div><div class="promo-title">TSI – Territory Sales Incharge</div></div>
+          </div>
+          <div class="exp-quote">
+            <p class="exp-quote-text">I worked with Pidilite Industries for over 4 years as a Territory Sales Incharge. It was a great learning experience where I developed strong skills in distributor management, market expansion, retailer engagement, and business development. Pidilite's customer-centric culture and market leadership helped me build a strong foundation in sales, which has contributed significantly to my growth into Area Sales Manager roles today.</p>
+            <p class="exp-quote-attr">— Personal Experience · Pidilite Industries</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end exp-cards-wrap -->
+
+    <!-- SALES TEAM IMAGE -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem" class="reveal">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Sales Team" class="img-half" onerror="this.style.display='none'">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Business Growth" class="img-half" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="whyhire" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1E3A6E 100%);padding:5.5rem 3rem;position:relative;overflow:hidden">
+  <div style="position:absolute;width:500px;height:500px;border-radius:50%;top:-150px;right:-100px;background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.15);pointer-events:none"></div>
+  <div style="position:absolute;width:280px;height:280px;border-radius:50%;bottom:-80px;left:-60px;background:rgba(212,160,23,0.07);border:1px solid rgba(212,160,23,0.1);pointer-events:none"></div>
+  <div class="container">
+    <div class="sec-top reveal">
+      <p class="sec-eye" style="color:#60A5FA">The Value I Bring</p>
+      <h2 class="sec-h" style="color:#fff">"Why Should We Hire You?"</h2>
+      <p class="sec-sub" style="color:#64748B">A question answered through a decade of proven results.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start" class="reveal">
+      <!-- LEFT: QUOTE CARD -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:2.5rem;position:relative">
+        <div style="font-size:5rem;font-family:'Playfair Display',serif;color:rgba(37,99,235,0.3);position:absolute;top:-10px;left:1.5rem;line-height:1">"</div>
+        <p style="font-size:1.02rem;color:#CBD5E1;line-height:1.95;font-style:italic;padding-top:1.5rem;position:relative;z-index:1">
+          With nearly <strong style="color:#fff;font-style:normal">10 years of experience</strong> across Pidilite, Asian Paints, Astral, and Berger Paints, I bring a unique combination of
+          <strong style="color:var(--gold);font-style:normal">sales leadership, distributor management, project sales expertise, market expansion capability,</strong> and
+          <strong style="color:var(--gold);font-style:normal">team development skills.</strong>
+          <br><br>
+          I have successfully handled <strong style="color:#fff;font-style:normal">Gujarat-wide operations</strong>, managed large teams, built strong channel networks, and consistently delivered business growth.
+          <br><br>
+          My experience across leading brands in <strong style="color:#fff;font-style:normal">paints, adhesives, and construction chemicals</strong> enables me to quickly understand market dynamics and create <strong style="color:var(--gold);font-style:normal">sustainable growth strategies</strong> for the organization.
+        </p>
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:0.75rem">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">👤</div>
+          <div>
+            <div style="font-size:0.85rem;font-weight:700;color:#fff">Yash Ashwinbhai Soni</div>
+            <div style="font-size:0.72rem;color:#64748B;letter-spacing:0.5px">Area Sales Manager · Surat, Gujarat</div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT: KEY STRENGTHS -->
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <p style="font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#60A5FA;margin-bottom:0.25rem">Key Strengths</p>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🏆</div>
+          <div><div style="font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.25rem">10 Years Across Top Brands</div><div style="font-size:0.8rem;color:#64748B;line-height:1.5">Pidilite · Asian Paints · Astral · Berger Paints</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(22,163,74,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📈</div>
+          <div><div style="font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Gujarat-Wide Sales Operations</div><div style="font-size:0.8rem;color:#64748B;line-height:1.5">Managed statewide distribution, market expansion &amp; project sales</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(212,160,23,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">👥</div>
+          <div><div style="font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Large Team Leadership</div><div style="font-size:0.8rem;color:#64748B;line-height:1.5">Led 40+ members — SOs, TSMs, AASMs &amp; channel partners</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(124,58,237,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🚀</div>
+          <div><div style="font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Consistent Business Growth</div><div style="font-size:0.8rem;color:#64748B;line-height:1.5">Grew Pidilite territory from ₹24L → ₹37L/year · 150% salary growth</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <div style="width:42px;height:42px;border-radius:10px;background:rgba(6,182,212,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🔬</div>
+          <div><div style="font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Deep Industry Knowledge</div><div style="font-size:0.8rem;color:#64748B;line-height:1.5">Paints · Adhesives · Construction Chemicals · FMCG</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-top reveal">
+      <p class="sec-eye">Capabilities</p>
+      <h2 class="sec-h">Core Skills</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-card"><div class="skill-icon">📈</div><div class="skill-name">Sales Strategy</div><div class="skill-tags"><span class="skill-tag">Market Expansion</span><span class="skill-tag">Revenue Growth</span><span class="skill-tag">Project Sales</span><span class="skill-tag">Target Mgmt</span></div></div>
+      <div class="skill-card"><div class="skill-icon">💼</div><div class="skill-name">Business Development</div><div class="skill-tags"><span class="skill-tag">Market Mapping</span><span class="skill-tag">Negotiation</span><span class="skill-tag">Key Account Mgmt</span><span class="skill-tag">CRM</span></div></div>
+      <div class="skill-card"><div class="skill-icon">🤝</div><div class="skill-name">Distributor Management</div><div class="skill-tags"><span class="skill-tag">Dealer Network</span><span class="skill-tag">Channel Dev.</span><span class="skill-tag">Retail Sales</span><span class="skill-tag">Appointments</span></div></div>
+      <div class="skill-card"><div class="skill-icon">👥</div><div class="skill-name">Team Leadership</div><div class="skill-tags"><span class="skill-tag">40+ Members Led</span><span class="skill-tag">Training &amp; Mentoring</span><span class="skill-tag">Performance Mgmt</span></div></div>
+      <div class="skill-card"><div class="skill-icon">🏗️</div><div class="skill-name">Customer Relationship</div><div class="skill-tags"><span class="skill-tag">Architects</span><span class="skill-tag">Engineers</span><span class="skill-tag">Contractors</span><span class="skill-tag">Retailers</span></div></div>
+      <div class="skill-card"><div class="skill-icon">🔬</div><div class="skill-name">Technical Knowledge</div><div class="skill-tags"><span class="skill-tag">Paints &amp; Coatings</span><span class="skill-tag">Adhesives</span><span class="skill-tag">Chemicals</span><span class="skill-tag">FMCG</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section id="summary">
+  <div class="container">
+    <div class="sec-top reveal">
+      <p class="sec-eye">About Me</p>
+      <h2 class="sec-h">Professional Summary</h2>
+    </div>
+    <div class="summary-grid reveal">
+      <div>
+        <p class="summary-text">Result-driven and highly experienced Sales &amp; Marketing Professional with <strong>9.5+ years of expertise</strong> in the Paints, Adhesives, FMCG, and Chemical industries. Proven track record in handling large-scale sales operations, distributor management, team leadership, business expansion, and project sales across Gujarat. Skilled in increasing market penetration, managing <strong>high-performing sales teams</strong>, driving revenue growth, and building long-term relationships with architects, engineers, contractors, retailers, and key clients. Recognized for <strong>leadership ability, technical product knowledge</strong>, and strong business development strategies.</p>
+        <div class="hcards">
+          <div class="hcard"><div class="hcard-icon">🏆</div><div class="hcard-text">9.5+ Years of Sales &amp; Marketing Experience</div></div>
+          <div class="hcard"><div class="hcard-icon">🗺️</div><div class="hcard-text">Handled Entire Gujarat Sales Operations</div></div>
+          <div class="hcard"><div class="hcard-icon">👥</div><div class="hcard-text">Managed 40+ Team Members Across Roles</div></div>
+          <div class="hcard"><div class="hcard-icon">🤝</div><div class="hcard-text">Expert in Distributor &amp; Channel Management</div></div>
+          <div class="hcard"><div class="hcard-icon">🏭</div><div class="hcard-text">Berger · Astral · Asian Paints · Pidilite</div></div>
+          <div class="hcard"><div class="hcard-icon">📊</div><div class="hcard-text">Expert in Project Sales &amp; Team Training</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="info-card">
+          <p class="info-title">Personal Details</p>
+          <div class="irows">
+            <div class="irow"><span class="ikey">Date of Birth</span><span class="ival">28 December 1997</span></div>
+            <div class="irow"><span class="ikey">Location</span><span class="ival">Surat, Gujarat, India</span></div>
+            <div class="irow"><span class="ikey">Languages</span><span class="ival">Gujarati · Hindi · English</span></div>
+            <div class="irow"><span class="ikey">Marital Status</span><span class="ival">Married</span></div>
+            <div class="irow"><span class="ikey">Phone</span><span class="ival">+91 7984341220</span></div>
+            <div class="irow"><span class="ikey">Email</span><span class="ival" style="font-size:.78rem">soniyash111.sy@gmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="sec-top reveal">
+      <p class="sec-eye">Academic Background</p>
+      <h2 class="sec-h">Education</h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card"><div class="edu-accent"></div><span class="edu-badge">Bachelor's Degree · 2021</span><div class="edu-degree">Bachelor of Engineering – Mechanical Engineering</div><div class="edu-school">Bhagwan Mahavir College of Engineering, Surat<br>Gujarat Technological University</div></div>
+      <div class="edu-card"><div class="edu-accent"></div><span class="edu-badge">Diploma · 2017</span><div class="edu-degree">Diploma in Mechanical Engineering</div><div class="edu-school">Navsarjan Institute of Polytechnic, Gandhinagar<br>Gujarat Technological University</div></div>
+    </div>
+    <p class="cert-label reveal">Certifications</p>
+    <div class="cert-list reveal">
+      <span class="cert-item">Robotics Engineering Project – Robosapiens India, Bangalore</span>
+      <span class="cert-item">Diploma Engineering Convocation Certificate</span>
+      <span class="cert-item">Bachelor Engineering Convocation Certificate</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="whyhire" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#1E3A6E 100%);padding:5.5rem 3rem;position:relative;overflow:hidden">
+  <div style="position:absolute;width:500px;height:500px;border-radius:50%;top:-150px;right:-100px;background:rgba(37,99,235,0.1);pointer-events:none"></div>
+  <div style="position:absolute;width:300px;height:300px;border-radius:50%;bottom:-80px;left:-60px;background:rgba(212,160,23,0.07);pointer-events:none"></div>
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <p style="font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#D4A017;margin-bottom:.6rem">The Big Question</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:.75rem">"Why Should We Hire You?"</h2>
+      <p style="font-size:.9rem;color:#64748B;max-width:500px;margin:0 auto">Here's the answer — straight, honest, and backed by nearly a decade of results.</p>
+    </div>
+
+    <!-- ANSWER QUOTE CARD -->
+    <div class="reveal" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:2.5rem 3rem;max-width:900px;margin:0 auto 3rem;position:relative">
+      <div style="font-size:6rem;font-family:'Playfair Display',serif;color:rgba(212,160,23,0.25);position:absolute;top:-10px;left:1.5rem;line-height:1">"</div>
+      <p style="font-size:1.05rem;color:#CBD5E1;line-height:1.95;font-weight:300;position:relative;z-index:1;padding-left:.5rem">
+        With nearly <strong style="color:#fff;font-weight:600">10 years of experience</strong> across Pidilite, Asian Paints, Astral, and Berger Paints, I bring a unique combination of
+        <strong style="color:#93C5FD;font-weight:600">sales leadership, distributor management, project sales expertise, market expansion capability, and team development skills.</strong>
+        I have successfully handled Gujarat-wide operations, managed large teams, built strong channel networks, and consistently delivered business growth.
+        My experience across leading brands in <strong style="color:#fff;font-weight:600">paints, adhesives, and construction chemicals</strong> enables me to quickly understand market dynamics
+        and create sustainable growth strategies for the organization.
+      </p>
+      <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:.75rem;padding-left:.5rem">
+        <div style="width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">👤</div>
+        <div>
+          <div style="font-size:.85rem;font-weight:700;color:#fff">Yash Ashwinbhai Soni</div>
+          <div style="font-size:.72rem;color:#64748B;letter-spacing:.5px">Area Sales Manager · 9.5+ Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 REASON CARDS -->
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:900px;margin:0 auto">
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">🏆</div>
+        <div style="font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.4rem">Proven Track Record</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Consistent target achievement across 4 top brands over 9.5+ years</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(212,160,23,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">📈</div>
+        <div style="font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.4rem">Real Sales Growth</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Grew Pidilite territory from ₹24 Lac to ₹36–37 Lac/year within months</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(22,163,74,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">👥</div>
+        <div style="font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.4rem">Team Builder</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Led and mentored 40+ member teams across diverse sales structures</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(139,92,246,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">🗺️</div>
+        <div style="font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.4rem">Gujarat Expert</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Deep market knowledge across entire Gujarat — distributors, dealers &amp; projects</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(37,99,235,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">🔬</div>
+        <div style="font-size:.8rem;font-weight:700;color:#fff;margin-bottom:.4rem">Multi-Industry Expertise</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Paints, Adhesives, Construction Chemicals — technical product knowledge across categories</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.5rem;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(212,160,23,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div style="width:44px;height:44px;border-radius:10px;background:rgba(212,160,23,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem">🚀</div>
+        <div style="font-size:.8rem;font-weight:700;color:#D4A017;margin-bottom:.4rem">Ready to Deliver</div>
+        <div style="font-size:.78rem;color:#64748B;line-height:1.6">Day-one impact — no ramp-up needed. Market-ready, team-ready, result-ready.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="ctop reveal">
+        <p class="c-eye">Get in Touch</p>
+        <h2 class="c-h">Let's Connect</h2>
+        <p class="c-sub">Open to senior sales leadership opportunities across Gujarat and beyond.</p>
+      </div>
+      <div class="cgrid reveal">
+        <div class="cbox"><div class="cbox-icon">📞</div><div><div class="cbox-k">Phone</div><div class="cbox-v">+91 7984341220</div></div></div>
+        <div class="cbox"><div class="cbox-icon">✉️</div><div><div class="cbox-k">Email</div><div class="cbox-v">soniyash111.sy@gmail.com</div></div></div>
+        <div class="cbox"><div class="cbox-icon">📍</div><div><div class="cbox-k">Location</div><div class="cbox-v">Surat, Gujarat, India</div></div></div>
+        <div class="cbox"><div class="cbox-icon">🗣️</div><div><div class="cbox-k">Languages</div><div class="cbox-v">Gujarati · Hindi · English</div></div></div>
+      </div>
+      <div class="cbtns reveal">
+        <a href="mailto:soniyash111.sy@gmail.com" class="btn-glow">Send an Email</a>
+        <a href="tel:+917984341220" class="btn-ow">Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 &nbsp;·&nbsp; Yash Ashwinbhai Soni &nbsp;·&nbsp; Area Sales Manager &nbsp;·&nbsp; Surat, Gujarat</p>
+</footer>
+
+<script>
+// Reveal on scroll
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);obs.unobserve(e.target)}
+  });
+},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Hamburger menu
+function toggleMenu(){
+  const btn=document.getElementById('hamburger');
+  const nav=document.getElementById('mobileNav');
+  btn.classList.toggle('open');
+  nav.classList.toggle('open');
+  document.body.style.overflow=nav.classList.contains('open')?'hidden':'';
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileNav').classList.remove('open');
+  document.body.style.overflow='';
+}
+// Close on outside click
+document.addEventListener('click',function(e){
+  const btn=document.getElementById('hamburger');
+  const nav=document.getElementById('mobileNav');
+  if(nav.classList.contains('open')&&!btn.contains(e.target)&&!nav.contains(e.target)){closeMenu()}
+});
+</script>
+</body>
+</html>
